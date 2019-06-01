@@ -126,6 +126,9 @@ class SortingRobot:
                     self.move_left()
                     self.swap_item()
                     self.move_right()
+            if not self.light_is_on():
+                while self.can_move_left():
+                    self.move_left()
 
 
 if __name__ == "__main__":
