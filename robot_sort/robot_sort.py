@@ -109,6 +109,13 @@ class SortingRobot:
                 # Swap the first time since it's set to None by default
                 self.swap_item()
                 self.move_right()
+                # If the held item is greater than the current item in the list
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                    self.set_light_off()
 
 
 if __name__ == "__main__":
