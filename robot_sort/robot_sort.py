@@ -121,6 +121,11 @@ class SortingRobot:
                     self.move_left()
                     self.swap_item()
                     self.move_right()
+                # If the held item is equak to the current item in the list
+                if self.compare_item() == 0:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
 
 
 if __name__ == "__main__":
