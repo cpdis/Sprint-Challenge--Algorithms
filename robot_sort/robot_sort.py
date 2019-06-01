@@ -103,6 +103,13 @@ class SortingRobot:
         the item should be moved in. 
         """
 
+        while not self.light_is_on():
+            self.set_light_on()
+            while self.can_move_right():
+                # Swap the first time since it's set to None by default
+                self.swap_item()
+                self.move_right()
+
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
